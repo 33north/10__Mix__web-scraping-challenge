@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Mars Data</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <div class="jumbotron text-center">
+                <h1>Mission To Mars</h1>
+                <p>Get Your Dosage Of Mars News</p>
+                <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+            </div>
+
+            <h2>Latest Mars News</h2>
+            <h3>{{ mars_data.mars_news_title }}</h3>
+            <h5>{{ mars_data.mars_news_article }}</h5>
+            <br>
+
+            <h2>Featured Mars Image</h2>
+            <img src="{{ mars_data.nasa_featured_image }}" alt="Mars">
+            <br>
+
+            <h2>Mars Hemispheres</h2>
+            
+            
+        </div>
+    </body>
+</html>
+
