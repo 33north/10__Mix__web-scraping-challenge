@@ -20,13 +20,23 @@
             <h3>{{ mars_data.mars_news_title }}</h3>
             <h5>{{ mars_data.mars_news_article }}</h5>
             <br>
-
-            <h2>Featured Mars Image</h2>
-            <img src="{{ mars_data.nasa_featured_image }}" alt="Mars">
+            
+            <div>
+                <div>
+                    <h2>Featured Mars Image</h2>
+                    <img src="{{ mars_data.nasa_featured_image }}" alt="Mars">
+                </div>
+                <div>
+                    {{ mars_data.mars_facts | safe}}
+                </div>
+            </div>
             <br>
 
             <h2>Mars Hemispheres</h2>
-            
+            {% for facts in mars_data.mars_hemispheres %}
+                <h3>{{ facts.title }}</h3>
+                <img src = "{{ facts.img_url }}" alt = "Image Error.  Image Name: {{ facts.title }}">
+            {% endfor %}
             
         </div>
     </body>

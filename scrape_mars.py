@@ -9,9 +9,7 @@ from splinter import Browser
 import time
 import pprint as pp
 
-# executable_path = {"executable_path": ChromeDriverManager().install()}
-# chrome = Browser("chrome", **executable_path, headless = True)
-
+# Time for webpage to load
 time_variable = 1
 
 def mars_website_scrape(browser):
@@ -113,27 +111,7 @@ def mars_hemi_website_scrape(browser):
 
     return hemisphere_image_urls
 
-# def scrape_mars_info(browser):
-#     # executable_path = {"executable_path": ChromeDriverManager().install()}
-#     # browser = Browser("chrome", **executable_path, headless = True)
-
-#     news_title, news_article = mars_website_scrape(browser)
-#     featured_image_url = nasa_website_scrape(browser)
-#     mars_fact_html = mars_fact_website_scrape()
-#     hemisphere_image_urls = mars_hemi_website_scrape(browser)
-#     scrape_dict = {
-#         "mars_news_title": news_title,
-#         "mars_bews_article": news_article,
-#         "nasa_featured_image": featured_image_url,
-#         "mars_facts": mars_fact_html,
-#         "mars_hemispheres": hemisphere_image_urls
-#     }
-
-#     # Turn this on to see content of dictionary
-#     # pp.pprint(scrape_dict)
-
-#     return scrape_dict
-
+# Scrapes information from various mars or space related websites and creates a dictionary of information.
 def scrape_mars_info():
     executable_path = {"executable_path": ChromeDriverManager().install()}
     browser = Browser("chrome", **executable_path, headless = True)
